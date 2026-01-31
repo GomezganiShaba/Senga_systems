@@ -19,8 +19,8 @@ This is the official website for Senga Systems, a premier technology and cyberse
 ## 📞 Contact
 
 - **Website**: [senga.systems](https://sengasystems.tech)
-- **Email**: info@senga.systems
-- **Security**: security@senga.systems
+- **Email**: info@senga.systems.tech
+- **Security**: security@senga.systems.tech
 
 
 © 2026 Senga Systems. All rights reserved.
