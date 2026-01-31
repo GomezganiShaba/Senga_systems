@@ -1,0 +1,721 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Senga Systems Services - Comprehensive cybersecurity, software development, data science, and IT solutions for businesses.">
+    <meta name="keywords" content="cybersecurity services, penetration testing, software development, data analytics, blockchain, network security">
+    <title>Our Services | Senga Systems</title>
+    
+    <link rel="icon" type="image/svg+xml" href="assets/icons/favicon.svg">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/animations.css">
+    
+    <!-- Theme Initialization (prevents flash) -->
+    <script>
+        (function() {
+            const savedTheme = localStorage.getItem('theme');
+            if (savedTheme) {
+                document.documentElement.setAttribute('data-theme', savedTheme);
+            } else if (!window.matchMedia('(prefers-color-scheme: dark)').matches) {
+                document.documentElement.setAttribute('data-theme', 'light');
+            }
+        })();
+    </script>
+    
+    <style>
+        /* Services Page Specific Styles */
+        .services-hero {
+            min-height: 60vh;
+            display: flex;
+            align-items: center;
+            padding-top: 120px;
+            background: linear-gradient(180deg, var(--bg-primary) 0%, var(--bg-secondary) 100%);
+            position: relative;
+            overflow: hidden;
+        }
+        
+        .services-hero::before {
+            content: '';
+            position: absolute;
+            top: -50%;
+            right: -20%;
+            width: 800px;
+            height: 800px;
+            background: radial-gradient(circle, rgba(0, 212, 255, 0.1), transparent 70%);
+            border-radius: 50%;
+        }
+        
+        .services-hero__content {
+            max-width: 800px;
+            text-align: center;
+            margin: 0 auto;
+            position: relative;
+            z-index: 1;
+        }
+        
+        .services-hero__title {
+            font-size: clamp(2.5rem, 5vw, 4rem);
+            font-weight: 800;
+            margin-bottom: 20px;
+        }
+        
+        .services-hero__subtitle {
+            font-size: 1.25rem;
+            color: var(--text-secondary);
+            line-height: 1.7;
+        }
+        
+        .service-detail {
+            padding: 100px 0;
+            border-bottom: 1px solid var(--border-primary);
+        }
+        
+        .service-detail:nth-child(even) {
+            background: var(--bg-secondary);
+        }
+        
+        .service-detail__grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 80px;
+            align-items: center;
+        }
+        
+        .service-detail:nth-child(even) .service-detail__grid {
+            direction: rtl;
+        }
+        
+        .service-detail:nth-child(even) .service-detail__content,
+        .service-detail:nth-child(even) .service-detail__visual {
+            direction: ltr;
+        }
+        
+        .service-detail__icon {
+            width: 80px;
+            height: 80px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            background: linear-gradient(135deg, rgba(0, 212, 255, 0.15), rgba(0, 255, 136, 0.1));
+            border-radius: var(--radius-lg);
+            color: var(--accent-cyan);
+            margin-bottom: 24px;
+        }
+        
+        .service-detail__title {
+            font-size: 2rem;
+            font-weight: 700;
+            margin-bottom: 16px;
+        }
+        
+        .service-detail__description {
+            color: var(--text-secondary);
+            font-size: 1.1rem;
+            line-height: 1.8;
+            margin-bottom: 32px;
+        }
+        
+        .service-detail__features {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 16px;
+            margin-bottom: 32px;
+        }
+        
+        .feature-item {
+            display: flex;
+            align-items: flex-start;
+            gap: 12px;
+            padding: 16px;
+            background: var(--bg-glass);
+            border: 1px solid var(--border-primary);
+            border-radius: var(--radius-md);
+            transition: var(--transition-base);
+        }
+        
+        .feature-item:hover {
+            border-color: var(--border-accent);
+        }
+        
+        .feature-item__icon {
+            width: 24px;
+            height: 24px;
+            color: var(--accent-green);
+            flex-shrink: 0;
+            margin-top: 2px;
+        }
+        
+        .feature-item__text h5 {
+            font-size: 14px;
+            font-weight: 600;
+            margin-bottom: 4px;
+        }
+        
+        .feature-item__text p {
+            font-size: 13px;
+            color: var(--text-muted);
+        }
+        
+        .service-detail__visual {
+            position: relative;
+        }
+        
+        .service-visual {
+            width: 100%;
+            aspect-ratio: 1;
+            background: var(--bg-glass);
+            border: 1px solid var(--border-primary);
+            border-radius: var(--radius-xl);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            position: relative;
+            overflow: hidden;
+        }
+        
+        .service-visual::before {
+            content: '';
+            position: absolute;
+            width: 200%;
+            height: 200%;
+            background: conic-gradient(from 0deg, transparent, rgba(0, 212, 255, 0.1), transparent);
+            animation: rotate 10s linear infinite;
+        }
+        
+        @keyframes rotate {
+            from { transform: rotate(0deg); }
+            to { transform: rotate(360deg); }
+        }
+        
+        .service-visual__icon {
+            position: relative;
+            z-index: 1;
+            color: var(--accent-cyan);
+        }
+        
+        .process-section {
+            padding: 100px 0;
+            background: var(--bg-primary);
+        }
+        
+        .process-grid {
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            gap: 24px;
+        }
+        
+        .process-card {
+            text-align: center;
+            padding: 32px 24px;
+            background: var(--bg-glass);
+            border: 1px solid var(--border-primary);
+            border-radius: var(--radius-lg);
+            position: relative;
+        }
+        
+        .process-card::after {
+            content: '';
+            position: absolute;
+            top: 50%;
+            right: -24px;
+            width: 24px;
+            height: 2px;
+            background: var(--border-accent);
+        }
+        
+        .process-card:last-child::after {
+            display: none;
+        }
+        
+        .process-card__number {
+            width: 48px;
+            height: 48px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            background: var(--gradient-primary);
+            border-radius: 50%;
+            color: var(--bg-primary);
+            font-weight: 700;
+            font-size: 1.25rem;
+            margin: 0 auto 20px;
+        }
+        
+        .process-card h4 {
+            font-size: 1rem;
+            font-weight: 600;
+            margin-bottom: 8px;
+        }
+        
+        .process-card p {
+            font-size: 14px;
+            color: var(--text-muted);
+        }
+        
+        @media (max-width: 992px) {
+            .service-detail__grid {
+                grid-template-columns: 1fr;
+                gap: 40px;
+            }
+            
+            .service-detail:nth-child(even) .service-detail__grid {
+                direction: ltr;
+            }
+            
+            .service-detail__features {
+                grid-template-columns: 1fr;
+            }
+            
+            .process-grid {
+                grid-template-columns: repeat(2, 1fr);
+            }
+            
+            .process-card::after {
+                display: none;
+            }
+        }
+        
+        @media (max-width: 768px) {
+            .process-grid {
+                grid-template-columns: 1fr;
+            }
+        }
+    </style>
+</head>
+<body>
+    <!-- Navigation -->
+    <header class="header scrolled" id="header">
+        <nav class="nav container">
+            <a href="index.html" class="nav__logo">
+                <div class="logo-icon">
+                    <svg viewBox="0 0 50 60" class="logo-shield">
+                        <path d="M25 2 L48 12 L48 28 C48 48 25 58 25 58 C25 58 2 48 2 28 L2 12 Z" fill="url(#logoGradient)" stroke="var(--accent-cyan)" stroke-width="1.5"/>
+                        <defs>
+                            <linearGradient id="logoGradient" x1="0%" y1="0%" x2="100%" y2="100%">
+                                <stop offset="0%" style="stop-color:rgba(0,212,255,0.2)"/>
+                                <stop offset="100%" style="stop-color:rgba(0,255,136,0.2)"/>
+                            </linearGradient>
+                        </defs>
+                        <text x="25" y="38" text-anchor="middle" fill="var(--accent-cyan)" font-size="18" font-weight="bold" font-family="Inter">S</text>
+                    </svg>
+                </div>
+                <span class="logo-text">Senga<span class="logo-highlight">Systems</span></span>
+            </a>
+            
+            <div class="nav__menu" id="nav-menu">
+                <ul class="nav__list">
+                    <li class="nav__item"><a href="index.html" class="nav__link">Home</a></li>
+                    <li class="nav__item"><a href="index.html#about" class="nav__link">About</a></li>
+                    <li class="nav__item"><a href="services.html" class="nav__link active">Services</a></li>
+                    <li class="nav__item"><a href="index.html#certifications" class="nav__link">Certifications</a></li>
+                    <li class="nav__item"><a href="index.html#founders" class="nav__link">Leadership</a></li>
+                    <li class="nav__item"><a href="index.html#contact" class="nav__link">Contact</a></li>
+                </ul>
+                <div class="nav__close" id="nav-close">
+                    <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                        <line x1="18" y1="6" x2="6" y2="18"></line>
+                        <line x1="6" y1="6" x2="18" y2="18"></line>
+                    </svg>
+                </div>
+            </div>
+            
+            <div class="nav__actions">
+                <a href="index.html#audit" class="btn btn--primary btn--nav">
+                    <span class="btn__icon">
+                        <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                            <path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/>
+                            <polyline points="9 12 11 14 15 10"/>
+                        </svg>
+                    </span>
+                    Free Security Audit
+                </a>
+                <div class="nav__toggle" id="nav-toggle">
+                    <span></span><span></span><span></span>
+                </div>
+            </div>
+        </nav>
+    </header>
+
+    <main class="main">
+        <!-- Services Hero -->
+        <section class="services-hero">
+            <div class="container">
+                <div class="services-hero__content">
+                    <span class="section__tag">Our Services</span>
+                    <h1 class="services-hero__title">
+                        Comprehensive <span class="text-gradient">Technology Solutions</span>
+                    </h1>
+                    <p class="services-hero__subtitle">
+                        From cybersecurity to software development, data science to design—we deliver 
+                        end-to-end solutions that protect, optimize, and transform your business.
+                    </p>
+                </div>
+            </div>
+        </section>
+
+        <!-- Cybersecurity Service -->
+        <section class="service-detail" id="cybersecurity">
+            <div class="container">
+                <div class="service-detail__grid">
+                    <div class="service-detail__content">
+                        <div class="service-detail__icon">
+                            <svg width="40" height="40" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
+                                <path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/>
+                                <path d="M12 8v4"/><path d="M12 16h.01"/>
+                            </svg>
+                        </div>
+                        <h2 class="service-detail__title">Cybersecurity Services</h2>
+                        <p class="service-detail__description">
+                            Protect your digital assets with our comprehensive cybersecurity solutions. 
+                            Our team of certified experts employs the latest techniques and tools to 
+                            identify vulnerabilities, strengthen defenses, and respond to threats.
+                        </p>
+                        <div class="service-detail__features">
+                            <div class="feature-item">
+                                <div class="feature-item__icon">
+                                    <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                        <polyline points="20 6 9 17 4 12"/>
+                                    </svg>
+                                </div>
+                                <div class="feature-item__text">
+                                    <h5>Penetration Testing</h5>
+                                    <p>Ethical hacking to find vulnerabilities before attackers do</p>
+                                </div>
+                            </div>
+                            <div class="feature-item">
+                                <div class="feature-item__icon">
+                                    <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                        <polyline points="20 6 9 17 4 12"/>
+                                    </svg>
+                                </div>
+                                <div class="feature-item__text">
+                                    <h5>Network Security</h5>
+                                    <p>Firewall configuration, IDS/IPS, and network monitoring</p>
+                                </div>
+                            </div>
+                            <div class="feature-item">
+                                <div class="feature-item__icon">
+                                    <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                        <polyline points="20 6 9 17 4 12"/>
+                                    </svg>
+                                </div>
+                                <div class="feature-item__text">
+                                    <h5>Vulnerability Assessment</h5>
+                                    <p>Systematic scanning and reporting of security weaknesses</p>
+                                </div>
+                            </div>
+                            <div class="feature-item">
+                                <div class="feature-item__icon">
+                                    <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                        <polyline points="20 6 9 17 4 12"/>
+                                    </svg>
+                                </div>
+                                <div class="feature-item__text">
+                                    <h5>Incident Response</h5>
+                                    <p>24/7 monitoring and rapid response to security incidents</p>
+                                </div>
+                            </div>
+                        </div>
+                        <a href="index.html#audit" class="btn btn--primary">Request Security Assessment</a>
+                    </div>
+                    <div class="service-detail__visual">
+                        <div class="service-visual">
+                            <div class="service-visual__icon">
+                                <svg width="120" height="120" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1">
+                                    <path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/>
+                                    <path d="M12 8v4"/><path d="M12 16h.01"/>
+                                </svg>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Software Engineering Service -->
+        <section class="service-detail" id="software">
+            <div class="container">
+                <div class="service-detail__grid">
+                    <div class="service-detail__content">
+                        <div class="service-detail__icon">
+                            <svg width="40" height="40" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
+                                <polyline points="16 18 22 12 16 6"/>
+                                <polyline points="8 6 2 12 8 18"/>
+                            </svg>
+                        </div>
+                        <h2 class="service-detail__title">Software Engineering</h2>
+                        <p class="service-detail__description">
+                            Build secure, scalable, and maintainable software with our expert engineering team. 
+                            We follow industry best practices and security-first development methodologies 
+                            to deliver solutions that stand the test of time.
+                        </p>
+                        <div class="service-detail__features">
+                            <div class="feature-item">
+                                <div class="feature-item__icon">
+                                    <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                        <polyline points="20 6 9 17 4 12"/>
+                                    </svg>
+                                </div>
+                                <div class="feature-item__text">
+                                    <h5>Secure Development</h5>
+                                    <p>Security integrated at every stage of the SDLC</p>
+                                </div>
+                            </div>
+                            <div class="feature-item">
+                                <div class="feature-item__icon">
+                                    <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                        <polyline points="20 6 9 17 4 12"/>
+                                    </svg>
+                                </div>
+                                <div class="feature-item__text">
+                                    <h5>API Development</h5>
+                                    <p>RESTful and GraphQL APIs with robust authentication</p>
+                                </div>
+                            </div>
+                            <div class="feature-item">
+                                <div class="feature-item__icon">
+                                    <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                        <polyline points="20 6 9 17 4 12"/>
+                                    </svg>
+                                </div>
+                                <div class="feature-item__text">
+                                    <h5>System Architecture</h5>
+                                    <p>Microservices, cloud-native, and enterprise architectures</p>
+                                </div>
+                            </div>
+                            <div class="feature-item">
+                                <div class="feature-item__icon">
+                                    <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                        <polyline points="20 6 9 17 4 12"/>
+                                    </svg>
+                                </div>
+                                <div class="feature-item__text">
+                                    <h5>Code Audits</h5>
+                                    <p>Security code review and static/dynamic analysis</p>
+                                </div>
+                            </div>
+                        </div>
+                        <a href="index.html#contact" class="btn btn--primary">Start Your Project</a>
+                    </div>
+                    <div class="service-detail__visual">
+                        <div class="service-visual">
+                            <div class="service-visual__icon">
+                                <svg width="120" height="120" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1">
+                                    <polyline points="16 18 22 12 16 6"/>
+                                    <polyline points="8 6 2 12 8 18"/>
+                                </svg>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Data Services -->
+        <section class="service-detail" id="data">
+            <div class="container">
+                <div class="service-detail__grid">
+                    <div class="service-detail__content">
+                        <div class="service-detail__icon">
+                            <svg width="40" height="40" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
+                                <ellipse cx="12" cy="5" rx="9" ry="3"/>
+                                <path d="M21 12c0 1.66-4 3-9 3s-9-1.34-9-3"/>
+                                <path d="M3 5v14c0 1.66 4 3 9 3s9-1.34 9-3V5"/>
+                            </svg>
+                        </div>
+                        <h2 class="service-detail__title">Data & AI Services</h2>
+                        <p class="service-detail__description">
+                            Unlock the power of your data with advanced analytics, machine learning, 
+                            and AI solutions. We transform raw data into actionable insights that 
+                            drive business decisions and competitive advantage.
+                        </p>
+                        <div class="service-detail__features">
+                            <div class="feature-item">
+                                <div class="feature-item__icon">
+                                    <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                        <polyline points="20 6 9 17 4 12"/>
+                                    </svg>
+                                </div>
+                                <div class="feature-item__text">
+                                    <h5>Data Analytics</h5>
+                                    <p>Comprehensive data analysis and visualization</p>
+                                </div>
+                            </div>
+                            <div class="feature-item">
+                                <div class="feature-item__icon">
+                                    <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                        <polyline points="20 6 9 17 4 12"/>
+                                    </svg>
+                                </div>
+                                <div class="feature-item__text">
+                                    <h5>Machine Learning</h5>
+                                    <p>Custom ML models for prediction and classification</p>
+                                </div>
+                            </div>
+                            <div class="feature-item">
+                                <div class="feature-item__icon">
+                                    <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                        <polyline points="20 6 9 17 4 12"/>
+                                    </svg>
+                                </div>
+                                <div class="feature-item__text">
+                                    <h5>AI Solutions</h5>
+                                    <p>Intelligent automation and decision support systems</p>
+                                </div>
+                            </div>
+                            <div class="feature-item">
+                                <div class="feature-item__icon">
+                                    <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                        <polyline points="20 6 9 17 4 12"/>
+                                    </svg>
+                                </div>
+                                <div class="feature-item__text">
+                                    <h5>Predictive Analytics</h5>
+                                    <p>Forecast trends and anticipate future outcomes</p>
+                                </div>
+                            </div>
+                        </div>
+                        <a href="index.html#contact" class="btn btn--primary">Discuss Your Data Needs</a>
+                    </div>
+                    <div class="service-detail__visual">
+                        <div class="service-visual">
+                            <div class="service-visual__icon">
+                                <svg width="120" height="120" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1">
+                                    <ellipse cx="12" cy="5" rx="9" ry="3"/>
+                                    <path d="M21 12c0 1.66-4 3-9 3s-9-1.34-9-3"/>
+                                    <path d="M3 5v14c0 1.66 4 3 9 3s9-1.34 9-3V5"/>
+                                </svg>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Our Process -->
+        <section class="process-section">
+            <div class="container">
+                <div class="section__header">
+                    <span class="section__tag">How We Work</span>
+                    <h2 class="section__title">Our <span class="text-gradient">Process</span></h2>
+                    <p class="section__subtitle">
+                        A proven methodology that ensures successful project delivery every time.
+                    </p>
+                </div>
+                
+                <div class="process-grid">
+                    <div class="process-card">
+                        <div class="process-card__number">1</div>
+                        <h4>Discovery</h4>
+                        <p>We analyze your needs, challenges, and goals to understand your unique requirements.</p>
+                    </div>
+                    <div class="process-card">
+                        <div class="process-card__number">2</div>
+                        <h4>Strategy</h4>
+                        <p>Our experts design a comprehensive solution tailored to your specific situation.</p>
+                    </div>
+                    <div class="process-card">
+                        <div class="process-card__number">3</div>
+                        <h4>Implementation</h4>
+                        <p>We execute the plan with precision, keeping you informed at every step.</p>
+                    </div>
+                    <div class="process-card">
+                        <div class="process-card__number">4</div>
+                        <h4>Support</h4>
+                        <p>Ongoing monitoring, maintenance, and optimization to ensure lasting success.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- CTA Section -->
+        <section class="section" style="background: linear-gradient(135deg, rgba(0, 212, 255, 0.05), rgba(0, 255, 136, 0.03));">
+            <div class="container">
+                <div style="text-align: center; max-width: 700px; margin: 0 auto;">
+                    <h2 class="section__title">Ready to Get Started?</h2>
+                    <p class="section__subtitle" style="margin-bottom: 32px;">
+                        Let's discuss how Senga Systems can help transform and protect your business.
+                    </p>
+                    <div style="display: flex; gap: 16px; justify-content: center; flex-wrap: wrap;">
+                        <a href="index.html#audit" class="btn btn--primary btn--lg">
+                            <span class="btn__icon">
+                                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                    <path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/>
+                                    <polyline points="9 12 11 14 15 10"/>
+                                </svg>
+                            </span>
+                            Free Security Audit
+                        </a>
+                        <a href="index.html#contact" class="btn btn--outline btn--lg">Contact Us</a>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer__grid">
+                <div class="footer__brand">
+                    <a href="index.html" class="footer__logo">
+                        <div class="logo-icon">
+                            <svg viewBox="0 0 50 60" class="logo-shield">
+                                <path d="M25 2 L48 12 L48 28 C48 48 25 58 25 58 C25 58 2 48 2 28 L2 12 Z" fill="url(#footerLogoGradient)" stroke="var(--accent-cyan)" stroke-width="1.5"/>
+                                <defs>
+                                    <linearGradient id="footerLogoGradient" x1="0%" y1="0%" x2="100%" y2="100%">
+                                        <stop offset="0%" style="stop-color:rgba(0,212,255,0.2)"/>
+                                        <stop offset="100%" style="stop-color:rgba(0,255,136,0.2)"/>
+                                    </linearGradient>
+                                </defs>
+                                <text x="25" y="38" text-anchor="middle" fill="var(--accent-cyan)" font-size="18" font-weight="bold" font-family="Inter">S</text>
+                            </svg>
+                        </div>
+                        <span class="logo-text">Senga<span class="logo-highlight">Systems</span></span>
+                    </a>
+                    <p class="footer__tagline">Securing the Digital Future</p>
+                </div>
+                
+                <div class="footer__links">
+                    <h4>Services</h4>
+                    <ul>
+                        <li><a href="#cybersecurity">Cybersecurity</a></li>
+                        <li><a href="#software">Software Engineering</a></li>
+                        <li><a href="#data">Data & AI</a></li>
+                    </ul>
+                </div>
+                
+                <div class="footer__links">
+                    <h4>Company</h4>
+                    <ul>
+                        <li><a href="index.html#about">About Us</a></li>
+                        <li><a href="index.html#founders">Leadership</a></li>
+                        <li><a href="index.html#contact">Contact</a></li>
+                    </ul>
+                </div>
+                
+                <div class="footer__links">
+                    <h4>Quick Links</h4>
+                    <ul>
+                        <li><a href="index.html#audit">Free Audit</a></li>
+                        <li><a href="index.html#certifications">Certifications</a></li>
+                        <li><a href="index.html">Home</a></li>
+                    </ul>
+                </div>
+            </div>
+            
+            <div class="footer__bottom">
+                <p class="footer__copyright">
+                    &copy; 2026 Senga Systems. All rights reserved.
+                </p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="js/main.js"></script>
+</body>
+</html>

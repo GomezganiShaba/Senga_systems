@@ -1,0 +1,247 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Secure Payment Platform Case Study - Senga Systems end-to-end encrypted payment processing system with blockchain verification for a fintech startup.">
+    <title>Secure Payment Platform | Senga Systems Portfolio</title>
+    
+    <!-- Favicon -->
+    <link rel="icon" type="image/svg+xml" href="../assets/icons/favicon.svg">
+    
+    <!-- Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+    
+    <!-- Styles -->
+    <link rel="stylesheet" href="../css/style.css">
+    <link rel="stylesheet" href="../css/animations.css">
+    <link rel="stylesheet" href="../css/portfolio-page.css">
+    
+    <!-- Theme Initialization (prevents flash) -->
+    <script>
+        (function() {
+            const savedTheme = localStorage.getItem('theme');
+            if (savedTheme) {
+                document.documentElement.setAttribute('data-theme', savedTheme);
+            } else if (!window.matchMedia('(prefers-color-scheme: dark)').matches) {
+                document.documentElement.setAttribute('data-theme', 'light');
+            }
+        })();
+    </script>
+</head>
+<body>
+    <!-- Header -->
+    <header class="header header--dark" id="header">
+        <nav class="nav container">
+            <a href="../index.html" class="nav__logo">
+                <svg width="40" height="40" viewBox="0 0 40 40" fill="none">
+                    <defs>
+                        <linearGradient id="logoGradient" x1="0%" y1="0%" x2="100%" y2="100%">
+                            <stop offset="0%" stop-color="#00d4ff"/>
+                            <stop offset="100%" stop-color="#00ff88"/>
+                        </linearGradient>
+                    </defs>
+                    <path d="M20 4L4 12v8c0 10 16 16 16 16s16-6 16-16v-8L20 4z" stroke="url(#logoGradient)" stroke-width="2" fill="none"/>
+                    <path d="M20 10L10 15v5c0 6 10 10 10 10s10-4 10-10v-5L20 10z" fill="url(#logoGradient)" opacity="0.3"/>
+                </svg>
+                <span>Senga Systems</span>
+            </a>
+            
+            <div class="nav__menu" id="nav-menu">
+                <ul class="nav__list">
+                    <li><a href="../index.html" class="nav__link">Home</a></li>
+                    <li><a href="../index.html#about" class="nav__link">About</a></li>
+                    <li><a href="../index.html#services" class="nav__link">Services</a></li>
+                    <li><a href="../index.html#portfolio" class="nav__link">Portfolio</a></li>
+                    <li><a href="../index.html#contact" class="nav__link">Contact</a></li>
+                </ul>
+            </div>
+            
+            <div class="nav__actions">
+                <a href="../index.html#contact" class="btn btn--primary btn--nav">Consult an Expert</a>
+            </div>
+        </nav>
+    </header>
+
+    <main>
+        <!-- Project Hero -->
+        <section class="project-hero">
+            <div class="container">
+                <a href="../index.html#portfolio" class="back-link">
+                    <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                        <line x1="19" y1="12" x2="5" y2="12"></line>
+                        <polyline points="12 19 5 12 12 5"></polyline>
+                    </svg>
+                    Back to Portfolio
+                </a>
+                
+                <div class="project-hero__content">
+                    <span class="project-category">Software Development</span>
+                    <h1>Secure Payment Platform</h1>
+                    <p class="project-subtitle">End-to-end encrypted payment processing system with blockchain verification for a fintech startup.</p>
+                    
+                    <div class="project-meta">
+                        <div class="meta-item">
+                            <span class="meta-label">Client</span>
+                            <span class="meta-value">Fintech Startup</span>
+                        </div>
+                        <div class="meta-item">
+                            <span class="meta-label">Duration</span>
+                            <span class="meta-value">12 Weeks</span>
+                        </div>
+                        <div class="meta-item">
+                            <span class="meta-label">Services</span>
+                            <span class="meta-value">Development, Blockchain, Security</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Project Overview -->
+        <section class="project-overview section">
+            <div class="container">
+                <div class="overview-grid">
+                    <div class="overview-content">
+                        <h2>Project Overview</h2>
+                        <p>A growing fintech startup approached Senga Systems to develop a secure, scalable payment processing platform that could handle high transaction volumes while maintaining the highest security standards.</p>
+                        <p>Our team designed and built an end-to-end encrypted payment system with blockchain verification, ensuring transaction integrity and regulatory compliance across multiple jurisdictions.</p>
+                        
+                        <h3>The Challenge</h3>
+                        <p>The client needed to:</p>
+                        <ul>
+                            <li>Build a compliant, secure payment gateway from scratch</li>
+                            <li>Implement end-to-end encryption for all transactions</li>
+                            <li>Integrate blockchain verification for transaction transparency</li>
+                            <li>Meet PCI-DSS compliance requirements</li>
+                            <li>Scale to handle thousands of concurrent transactions</li>
+                        </ul>
+                    </div>
+                    
+                    <div class="overview-visual">
+                        <div class="project-image-placeholder">
+                            <svg width="80" height="80" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1">
+                                <rect x="1" y="4" width="22" height="16" rx="2" ry="2"/>
+                                <line x1="1" y1="10" x2="23" y2="10"/>
+                            </svg>
+                            <span>Payment Platform Dashboard</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Approach -->
+        <section class="project-approach section">
+            <div class="container">
+                <div class="section__header">
+                    <span class="section__tag">Methodology</span>
+                    <h2 class="section__title">Our <span class="text-gradient">Approach</span></h2>
+                </div>
+                
+                <div class="approach-grid">
+                    <div class="approach-card">
+                        <div class="approach-number">01</div>
+                        <h3>Architecture Design</h3>
+                        <p>Designed a microservices architecture with redundancy and failover capabilities to ensure 99.99% uptime and seamless scalability.</p>
+                    </div>
+                    <div class="approach-card">
+                        <div class="approach-number">02</div>
+                        <h3>Security-First Development</h3>
+                        <p>Implemented end-to-end encryption, secure key management, and multi-layer authentication throughout the development process.</p>
+                    </div>
+                    <div class="approach-card">
+                        <div class="approach-number">03</div>
+                        <h3>Blockchain Integration</h3>
+                        <p>Integrated blockchain technology for transaction verification, providing immutable audit trails and enhanced transparency.</p>
+                    </div>
+                    <div class="approach-card">
+                        <div class="approach-number">04</div>
+                        <h3>Compliance Testing</h3>
+                        <p>Conducted rigorous PCI-DSS compliance testing and security audits to meet financial industry regulations.</p>
+                    </div>
+                    <div class="approach-card">
+                        <div class="approach-number">05</div>
+                        <h3>Deployment & Monitoring</h3>
+                        <p>Deployed on secure cloud infrastructure with real-time monitoring, automated alerts, and 24/7 incident response capabilities.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Results -->
+        <section class="project-results section">
+            <div class="container">
+                <div class="section__header">
+                    <span class="section__tag">Outcomes</span>
+                    <h2 class="section__title">Project <span class="text-gradient">Results</span></h2>
+                </div>
+                
+                <div class="results-grid">
+                    <div class="result-card">
+                        <div class="result-value">99.99%</div>
+                        <div class="result-label">Platform Uptime</div>
+                    </div>
+                    <div class="result-card">
+                        <div class="result-value">Zero</div>
+                        <div class="result-label">Security Breaches</div>
+                    </div>
+                    <div class="result-card">
+                        <div class="result-value">50K+</div>
+                        <div class="result-label">Transactions Processed</div>
+                    </div>
+                    <div class="result-card">
+                        <div class="result-value">100%</div>
+                        <div class="result-label">PCI-DSS Compliance</div>
+                    </div>
+                </div>
+                
+                <div class="testimonial-card">
+                    <svg class="quote-icon" width="48" height="48" viewBox="0 0 24 24" fill="currentColor" opacity="0.2">
+                        <path d="M14.017 21v-7.391c0-5.704 3.731-9.57 8.983-10.609l.995 2.151c-2.432.917-3.995 3.638-3.995 5.849h4v10h-9.983zm-14.017 0v-7.391c0-5.704 3.748-9.57 9-10.609l.996 2.151c-2.433.917-3.996 3.638-3.996 5.849h3.983v10h-9.983z"/>
+                    </svg>
+                    <blockquote>
+                        "Senga Systems delivered exactly what we needed—a secure, scalable payment platform that our customers can trust. Their blockchain integration gives us a competitive edge, and we haven't had a single security incident since launch. The team's expertise in both development and security is truly exceptional."
+                    </blockquote>
+                    <div class="testimonial-author">
+                        <span class="author-name">Chief Technology Officer</span>
+                        <span class="author-title">Fintech Startup</span>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- CTA -->
+        <section class="project-cta section">
+            <div class="container">
+                <div class="cta-card">
+                    <h2>Ready to Build Your Payment Platform?</h2>
+                    <p>Let's create a secure, scalable payment solution tailored to your business needs.</p>
+                    <div class="cta-actions">
+                        <a href="../index.html#contact" class="btn btn--primary btn--lg">Get Free Consultation</a>
+                        <a href="https://wa.me/265986076400" class="btn btn--outline btn--lg">Chat on WhatsApp</a>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer__bottom">
+                <p class="footer__copyright">&copy; 2024 Senga Systems. All rights reserved.</p>
+                <div class="footer__links-inline">
+                    <a href="../index.html">Home</a>
+                    <a href="../index.html#portfolio">Portfolio</a>
+                    <a href="../index.html#contact">Contact</a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <script src="../js/main.js"></script>
+</body>
+</html>

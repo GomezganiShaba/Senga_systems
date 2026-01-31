@@ -1,0 +1,252 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Enterprise Security Assessment Case Study - Senga Systems comprehensive penetration testing and security audit for a major financial institution.">
+    <title>Enterprise Security Assessment | Senga Systems Portfolio</title>
+    
+    <!-- Favicon -->
+    <link rel="icon" type="image/svg+xml" href="../assets/icons/favicon.svg">
+    
+    <!-- Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+    
+    <!-- Styles -->
+    <link rel="stylesheet" href="../css/style.css">
+    <link rel="stylesheet" href="../css/animations.css">
+    <link rel="stylesheet" href="../css/portfolio-page.css">
+    
+    <!-- Theme Initialization (prevents flash) -->
+    <script>
+        (function() {
+            const savedTheme = localStorage.getItem('theme');
+            if (savedTheme) {
+                document.documentElement.setAttribute('data-theme', savedTheme);
+            } else if (!window.matchMedia('(prefers-color-scheme: dark)').matches) {
+                document.documentElement.setAttribute('data-theme', 'light');
+            }
+        })();
+    </script>
+</head>
+<body>
+    <!-- Header -->
+    <header class="header header--dark" id="header">
+        <nav class="nav container">
+            <a href="../index.html" class="nav__logo">
+                <svg width="40" height="40" viewBox="0 0 40 40" fill="none">
+                    <defs>
+                        <linearGradient id="logoGradient" x1="0%" y1="0%" x2="100%" y2="100%">
+                            <stop offset="0%" stop-color="#00d4ff"/>
+                            <stop offset="100%" stop-color="#00ff88"/>
+                        </linearGradient>
+                    </defs>
+                    <path d="M20 4L4 12v8c0 10 16 16 16 16s16-6 16-16v-8L20 4z" stroke="url(#logoGradient)" stroke-width="2" fill="none"/>
+                    <path d="M20 10L10 15v5c0 6 10 10 10 10s10-4 10-10v-5L20 10z" fill="url(#logoGradient)" opacity="0.3"/>
+                </svg>
+                <span>Senga Systems</span>
+            </a>
+            
+            <div class="nav__menu" id="nav-menu">
+                <ul class="nav__list">
+                    <li><a href="../index.html" class="nav__link">Home</a></li>
+                    <li><a href="../index.html#about" class="nav__link">About</a></li>
+                    <li><a href="../index.html#services" class="nav__link">Services</a></li>
+                    <li><a href="../index.html#portfolio" class="nav__link">Portfolio</a></li>
+                    <li><a href="../index.html#contact" class="nav__link">Contact</a></li>
+                </ul>
+            </div>
+            
+            <div class="nav__actions">
+                <a href="../index.html#contact" class="btn btn--primary btn--nav">Consult an Expert</a>
+            </div>
+        </nav>
+    </header>
+
+    <main>
+        <!-- Project Hero -->
+        <section class="project-hero">
+            <div class="container">
+                <a href="../index.html#portfolio" class="back-link">
+                    <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                        <line x1="19" y1="12" x2="5" y2="12"></line>
+                        <polyline points="12 19 5 12 12 5"></polyline>
+                    </svg>
+                    Back to Portfolio
+                </a>
+                
+                <div class="project-hero__content">
+                    <span class="project-category">Security Audit</span>
+                    <h1>Enterprise Security Assessment</h1>
+                    <p class="project-subtitle">Comprehensive penetration testing and security audit for a leading financial institution in Malawi.</p>
+                    
+                    <div class="project-meta">
+                        <div class="meta-item">
+                            <span class="meta-label">Client</span>
+                            <span class="meta-value">Financial Institution</span>
+                        </div>
+                        <div class="meta-item">
+                            <span class="meta-label">Duration</span>
+                            <span class="meta-value">8 Weeks</span>
+                        </div>
+                        <div class="meta-item">
+                            <span class="meta-label">Services</span>
+                            <span class="meta-value">Pen Testing, Audit, Training</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Project Overview -->
+        <section class="project-overview section">
+            <div class="container">
+                <div class="overview-grid">
+                    <div class="overview-content">
+                        <h2>Project Overview</h2>
+                        <p>A major financial institution approached Senga Systems with concerns about their cybersecurity posture following industry-wide increases in cyber attacks targeting financial services.</p>
+                        <p>Our team conducted a comprehensive security assessment including penetration testing, vulnerability assessment, and compliance auditing to identify weaknesses and provide actionable recommendations.</p>
+                        
+                        <h3>The Challenge</h3>
+                        <p>The client needed to:</p>
+                        <ul>
+                            <li>Identify vulnerabilities across their network infrastructure</li>
+                            <li>Test their web applications for security flaws</li>
+                            <li>Assess employee security awareness</li>
+                            <li>Ensure compliance with financial industry regulations</li>
+                            <li>Develop an incident response plan</li>
+                        </ul>
+                    </div>
+                    
+                    <div class="overview-visual">
+                        <div class="project-image-placeholder">
+                            <svg width="80" height="80" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1">
+                                <path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/>
+                                <polyline points="9 12 11 14 15 10"/>
+                            </svg>
+                            <span>Security Assessment Dashboard</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Approach -->
+        <section class="project-approach section">
+            <div class="container">
+                <div class="section__header">
+                    <span class="section__tag">Methodology</span>
+                    <h2 class="section__title">Our <span class="text-gradient">Approach</span></h2>
+                </div>
+                
+                <div class="approach-grid">
+                    <div class="approach-card">
+                        <div class="approach-number">01</div>
+                        <h3>Discovery & Reconnaissance</h3>
+                        <p>Mapped the client's entire digital footprint, including public-facing assets, internal networks, and cloud infrastructure.</p>
+                    </div>
+                    <div class="approach-card">
+                        <div class="approach-number">02</div>
+                        <h3>Vulnerability Assessment</h3>
+                        <p>Conducted automated and manual vulnerability scanning across all systems, identifying 47 critical and high-severity vulnerabilities.</p>
+                    </div>
+                    <div class="approach-card">
+                        <div class="approach-number">03</div>
+                        <h3>Penetration Testing</h3>
+                        <p>Performed ethical hacking to exploit identified vulnerabilities, demonstrating real-world attack scenarios.</p>
+                    </div>
+                    <div class="approach-card">
+                        <div class="approach-number">04</div>
+                        <h3>Social Engineering</h3>
+                        <p>Tested employee security awareness through phishing simulations and physical security assessments.</p>
+                    </div>
+                    <div class="approach-card">
+                        <div class="approach-number">05</div>
+                        <h3>Compliance Review</h3>
+                        <p>Assessed security controls against industry standards and regulatory requirements.</p>
+                    </div>
+                    <div class="approach-card">
+                        <div class="approach-number">06</div>
+                        <h3>Remediation Support</h3>
+                        <p>Provided detailed remediation guidance and assisted with implementing security improvements.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Results -->
+        <section class="project-results section">
+            <div class="container">
+                <div class="section__header">
+                    <span class="section__tag">Outcomes</span>
+                    <h2 class="section__title">Project <span class="text-gradient">Results</span></h2>
+                </div>
+                
+                <div class="results-grid">
+                    <div class="result-card">
+                        <div class="result-value">47</div>
+                        <div class="result-label">Vulnerabilities Identified</div>
+                    </div>
+                    <div class="result-card">
+                        <div class="result-value">98%</div>
+                        <div class="result-label">Remediation Rate</div>
+                    </div>
+                    <div class="result-card">
+                        <div class="result-value">100%</div>
+                        <div class="result-label">Compliance Achieved</div>
+                    </div>
+                    <div class="result-card">
+                        <div class="result-value">Zero</div>
+                        <div class="result-label">Incidents Post-Audit</div>
+                    </div>
+                </div>
+                
+                <div class="testimonial-card">
+                    <svg class="quote-icon" width="48" height="48" viewBox="0 0 24 24" fill="currentColor" opacity="0.2">
+                        <path d="M14.017 21v-7.391c0-5.704 3.731-9.57 8.983-10.609l.995 2.151c-2.432.917-3.995 3.638-3.995 5.849h4v10h-9.983zm-14.017 0v-7.391c0-5.704 3.748-9.57 9-10.609l.996 2.151c-2.433.917-3.996 3.638-3.996 5.849h3.983v10h-9.983z"/>
+                    </svg>
+                    <blockquote>
+                        "Senga Systems' thorough assessment revealed vulnerabilities we didn't know existed. Their professional approach and detailed remediation guidance helped us significantly strengthen our security posture. We now have confidence in our defenses against cyber threats."
+                    </blockquote>
+                    <div class="testimonial-author">
+                        <span class="author-name">Chief Information Security Officer</span>
+                        <span class="author-title">Leading Financial Institution</span>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- CTA -->
+        <section class="project-cta section">
+            <div class="container">
+                <div class="cta-card">
+                    <h2>Need a Security Assessment?</h2>
+                    <p>Protect your organization with a comprehensive security audit from our certified experts.</p>
+                    <div class="cta-actions">
+                        <a href="../index.html#contact" class="btn btn--primary btn--lg">Get Free Consultation</a>
+                        <a href="https://wa.me/265986076400" class="btn btn--outline btn--lg">Chat on WhatsApp</a>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer__bottom">
+                <p class="footer__copyright">&copy; 2024 Senga Systems. All rights reserved.</p>
+                <div class="footer__links-inline">
+                    <a href="../index.html">Home</a>
+                    <a href="../index.html#portfolio">Portfolio</a>
+                    <a href="../index.html#contact">Contact</a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <script src="../js/main.js"></script>
+</body>
+</html>

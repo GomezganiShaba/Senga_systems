@@ -1,0 +1,256 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="AI Analytics Dashboard Case Study - Senga Systems machine learning-powered business intelligence platform for real-time decision making.">
+    <title>AI Analytics Dashboard | Senga Systems Portfolio</title>
+    
+    <!-- Favicon -->
+    <link rel="icon" type="image/svg+xml" href="../assets/icons/favicon.svg">
+    
+    <!-- Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+    
+    <!-- Styles -->
+    <link rel="stylesheet" href="../css/style.css">
+    <link rel="stylesheet" href="../css/animations.css">
+    <link rel="stylesheet" href="../css/portfolio-page.css">
+    
+    <!-- Theme Initialization (prevents flash) -->
+    <script>
+        (function() {
+            const savedTheme = localStorage.getItem('theme');
+            if (savedTheme) {
+                document.documentElement.setAttribute('data-theme', savedTheme);
+            } else if (!window.matchMedia('(prefers-color-scheme: dark)').matches) {
+                document.documentElement.setAttribute('data-theme', 'light');
+            }
+        })();
+    </script>
+</head>
+<body>
+    <!-- Header -->
+    <header class="header header--dark" id="header">
+        <nav class="nav container">
+            <a href="../index.html" class="nav__logo">
+                <svg width="40" height="40" viewBox="0 0 40 40" fill="none">
+                    <defs>
+                        <linearGradient id="logoGradient" x1="0%" y1="0%" x2="100%" y2="100%">
+                            <stop offset="0%" stop-color="#00d4ff"/>
+                            <stop offset="100%" stop-color="#00ff88"/>
+                        </linearGradient>
+                    </defs>
+                    <path d="M20 4L4 12v8c0 10 16 16 16 16s16-6 16-16v-8L20 4z" stroke="url(#logoGradient)" stroke-width="2" fill="none"/>
+                    <path d="M20 10L10 15v5c0 6 10 10 10 10s10-4 10-10v-5L20 10z" fill="url(#logoGradient)" opacity="0.3"/>
+                </svg>
+                <span>Senga Systems</span>
+            </a>
+            
+            <div class="nav__menu" id="nav-menu">
+                <ul class="nav__list">
+                    <li><a href="../index.html" class="nav__link">Home</a></li>
+                    <li><a href="../index.html#about" class="nav__link">About</a></li>
+                    <li><a href="../index.html#services" class="nav__link">Services</a></li>
+                    <li><a href="../index.html#portfolio" class="nav__link">Portfolio</a></li>
+                    <li><a href="../index.html#contact" class="nav__link">Contact</a></li>
+                </ul>
+            </div>
+            
+            <div class="nav__actions">
+                <a href="../index.html#contact" class="btn btn--primary btn--nav">Consult an Expert</a>
+            </div>
+        </nav>
+    </header>
+
+    <main>
+        <!-- Project Hero -->
+        <section class="project-hero">
+            <div class="container">
+                <a href="../index.html#portfolio" class="back-link">
+                    <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                        <line x1="19" y1="12" x2="5" y2="12"></line>
+                        <polyline points="12 19 5 12 12 5"></polyline>
+                    </svg>
+                    Back to Portfolio
+                </a>
+                
+                <div class="project-hero__content">
+                    <span class="project-category">Data Science</span>
+                    <h1>AI Analytics Dashboard</h1>
+                    <p class="project-subtitle">Machine learning-powered business intelligence platform for real-time analytics and data-driven decision making.</p>
+                    
+                    <div class="project-meta">
+                        <div class="meta-item">
+                            <span class="meta-label">Client</span>
+                            <span class="meta-value">Enterprise Corporation</span>
+                        </div>
+                        <div class="meta-item">
+                            <span class="meta-label">Duration</span>
+                            <span class="meta-value">14 Weeks</span>
+                        </div>
+                        <div class="meta-item">
+                            <span class="meta-label">Services</span>
+                            <span class="meta-value">AI/ML, Data Analytics, Development</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Project Overview -->
+        <section class="project-overview section">
+            <div class="container">
+                <div class="overview-grid">
+                    <div class="overview-content">
+                        <h2>Project Overview</h2>
+                        <p>An enterprise corporation struggling with fragmented data sources and slow reporting processes approached Senga Systems to build a unified analytics platform powered by artificial intelligence.</p>
+                        <p>Our data science team developed a comprehensive business intelligence dashboard that leverages machine learning to provide predictive insights, anomaly detection, and automated reporting in real-time.</p>
+                        
+                        <h3>The Challenge</h3>
+                        <p>The client needed to:</p>
+                        <ul>
+                            <li>Enable real-time analytics for faster decision making</li>
+                            <li>Consolidate data from multiple disparate sources</li>
+                            <li>Implement predictive models for business forecasting</li>
+                            <li>Automate report generation and anomaly alerts</li>
+                            <li>Provide intuitive visualizations for non-technical users</li>
+                        </ul>
+                    </div>
+                    
+                    <div class="overview-visual">
+                        <div class="project-image-placeholder">
+                            <svg width="80" height="80" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1">
+                                <line x1="18" y1="20" x2="18" y2="10"/>
+                                <line x1="12" y1="20" x2="12" y2="4"/>
+                                <line x1="6" y1="20" x2="6" y2="14"/>
+                                <circle cx="18" cy="8" r="2"/>
+                                <circle cx="12" cy="2" r="2"/>
+                                <circle cx="6" cy="12" r="2"/>
+                            </svg>
+                            <span>AI Analytics Dashboard Interface</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Approach -->
+        <section class="project-approach section">
+            <div class="container">
+                <div class="section__header">
+                    <span class="section__tag">Methodology</span>
+                    <h2 class="section__title">Our <span class="text-gradient">Approach</span></h2>
+                </div>
+                
+                <div class="approach-grid">
+                    <div class="approach-card">
+                        <div class="approach-number">01</div>
+                        <h3>Data Discovery</h3>
+                        <p>Mapped all data sources, analyzed data quality, and identified key metrics and KPIs for business decision making.</p>
+                    </div>
+                    <div class="approach-card">
+                        <div class="approach-number">02</div>
+                        <h3>Data Pipeline Architecture</h3>
+                        <p>Built scalable ETL pipelines to consolidate data from ERP, CRM, and operational systems into a unified data warehouse.</p>
+                    </div>
+                    <div class="approach-card">
+                        <div class="approach-number">03</div>
+                        <h3>ML Model Development</h3>
+                        <p>Developed machine learning models for demand forecasting, customer segmentation, and anomaly detection.</p>
+                    </div>
+                    <div class="approach-card">
+                        <div class="approach-number">04</div>
+                        <h3>Dashboard Design</h3>
+                        <p>Created intuitive, interactive dashboards with drill-down capabilities and customizable views for different user roles.</p>
+                    </div>
+                    <div class="approach-card">
+                        <div class="approach-number">05</div>
+                        <h3>Real-Time Processing</h3>
+                        <p>Implemented stream processing for real-time data updates and instant alerts on critical business metrics.</p>
+                    </div>
+                    <div class="approach-card">
+                        <div class="approach-number">06</div>
+                        <h3>Training & Deployment</h3>
+                        <p>Deployed the platform and conducted comprehensive training for business users across departments.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Results -->
+        <section class="project-results section">
+            <div class="container">
+                <div class="section__header">
+                    <span class="section__tag">Outcomes</span>
+                    <h2 class="section__title">Project <span class="text-gradient">Results</span></h2>
+                </div>
+                
+                <div class="results-grid">
+                    <div class="result-card">
+                        <div class="result-value">30%</div>
+                        <div class="result-label">Improvement in Decision Accuracy</div>
+                    </div>
+                    <div class="result-card">
+                        <div class="result-value">85%</div>
+                        <div class="result-label">Reduction in Report Time</div>
+                    </div>
+                    <div class="result-card">
+                        <div class="result-value">Real-Time</div>
+                        <div class="result-label">Data Updates</div>
+                    </div>
+                    <div class="result-card">
+                        <div class="result-value">15+</div>
+                        <div class="result-label">Data Sources Integrated</div>
+                    </div>
+                </div>
+                
+                <div class="testimonial-card">
+                    <svg class="quote-icon" width="48" height="48" viewBox="0 0 24 24" fill="currentColor" opacity="0.2">
+                        <path d="M14.017 21v-7.391c0-5.704 3.731-9.57 8.983-10.609l.995 2.151c-2.432.917-3.995 3.638-3.995 5.849h4v10h-9.983zm-14.017 0v-7.391c0-5.704 3.748-9.57 9-10.609l.996 2.151c-2.433.917-3.996 3.638-3.996 5.849h3.983v10h-9.983z"/>
+                    </svg>
+                    <blockquote>
+                        "The AI Analytics Dashboard has transformed how we make decisions. We went from waiting days for reports to having real-time insights at our fingertips. The predictive capabilities have helped us anticipate market changes and stay ahead of competitors."
+                    </blockquote>
+                    <div class="testimonial-author">
+                        <span class="author-name">Chief Data Officer</span>
+                        <span class="author-title">Enterprise Corporation</span>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- CTA -->
+        <section class="project-cta section">
+            <div class="container">
+                <div class="cta-card">
+                    <h2>Ready to Unlock Your Data's Potential?</h2>
+                    <p>Transform your business with AI-powered analytics that drive smarter, faster decisions.</p>
+                    <div class="cta-actions">
+                        <a href="../index.html#contact" class="btn btn--primary btn--lg">Get Free Consultation</a>
+                        <a href="https://wa.me/265986076400" class="btn btn--outline btn--lg">Chat on WhatsApp</a>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer__bottom">
+                <p class="footer__copyright">&copy; 2024 Senga Systems. All rights reserved.</p>
+                <div class="footer__links-inline">
+                    <a href="../index.html">Home</a>
+                    <a href="../index.html#portfolio">Portfolio</a>
+                    <a href="../index.html#contact">Contact</a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <script src="../js/main.js"></script>
+</body>
+</html>
